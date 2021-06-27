@@ -376,14 +376,15 @@ h1{
 
 .dogecard__fecha{
     color: var(--gris);
-    font-size: 1.2rem;
-    margin: 1rem 0 0 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1.3rem 0 0 1.5rem;
 }
 
 .dogecard__nombre{
     color: var(--blanco);
     margin: 1rem 0;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     font-size: 2.3rem;
 }
 
@@ -527,19 +528,6 @@ h1{
     text-align: center;
 }
 
-.app__info-btn{
-    background-color: var(--negro);
-    color: var(--blanco);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 3%;
-    cursor: pointer;
-}
-
 .btn-downland{
     display: flex;
     flex-direction: row;
@@ -547,23 +535,13 @@ h1{
     align-items: center;
 }
 
-.btn__parrafo{
-    display: flex;
-    flex-direction:column;
-    font-size: 1.5rem;
+.apple__logo{
+    width: 25rem;
 }
 
-.btn__span{
-    font-weight: bold;
-    font-size: 1.8rem;
+.play__logo{
+    width: 25rem;
 }
-
-.app__info-logo{
-    width: 12%;
-    object-fit: contain;
-    object-position: center;
-}
-
 
 /* ***************************** SECCION: FOOTER ***************************** */
 
