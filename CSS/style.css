@@ -1,0 +1,706 @@
+/* Globales */
+:root{
+    --negro: #000; 
+    --amarillo:#FFC720;
+    --amarillofuerte: #FFBF00; 
+    --amarillosuave: #FFD760;
+    --blanco: #FFF;
+    --verde: #03fc45;
+    --rojo: #cc0000;
+    --amarillotransparente: rgba(255, 153, 0, 0.8);
+    --tarjeta: #ffdb38;
+    --gris: #666666;
+    --grisclaro: #f2f2f2;
+
+    /* Fuentes */
+
+    --principal: 'Roboto', sans-serif;
+    --secundaria: 'Reem Kufi', sans-serif;
+
+    /* Utilidades */
+
+    --sombreado: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--principal)
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 4.5rem;
+}
+
+.contenedor{
+    max-width: 120rem;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* CSS */
+
+/* ***************************** HEADER/NAVBAR ***************************** */
+.header{
+    height: 10rem;
+}
+.navbar{
+    width: 100%;
+    height: 8rem;
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+/* Navbar titulo */
+
+.navbar__titulo{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar__titulo a{
+    color: var(--amarillo)
+}
+
+.navbar__titulo span{
+    color: var(--amarillofuerte);
+}
+
+.navbar__logo{
+    width: 4.4rem;
+}
+
+/* Navbar links */
+
+.navbar__links-list{
+    display: flex;
+    gap: 3rem;
+}
+
+.navbar__links-list a{
+    position: relative;
+    color: var(--negro);
+    padding: 0 1rem;
+    font-size: 1.8rem;
+}
+
+.navbar__links-list a:after{
+    content: "";
+    position: absolute;
+    background-color: var(--amarillo);
+    height: .2rem;
+    width: 0;
+    left: 0;
+    bottom: -1rem;
+    
+}
+
+.navbar__links-list a:hover::after{
+    width: 100%;
+    transition: .3s;
+}
+
+/* Navbar Button */
+
+.navbar__button-login{
+    background-color: var(--amarillo);
+    font-size: 2rem;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    
+}
+
+.navbar__button-login:hover{
+    -webkit-box-shadow: var(--sombreado);
+    box-shadow: var(--sombreado);
+    transition: .6s;
+    cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .navbar{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 26.5rem;
+      gap: 1rem;
+    }
+
+    .navbar__titulo h1{
+        font-size: 3.5rem;
+    }
+
+    .navbar__links-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
+        font-size: 2rem;
+    }
+
+    .navbar__button-login{
+        font-size: 1.4rem;
+    }
+}
+
+/* ***************************** SECCION: NOSOTROS ***************************** */
+
+.about{
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Imagen */
+
+.about__imagen{
+    object-fit: cover;
+    object-position: center;
+    width: 36rem;
+    border-radius: 100%;
+}
+
+/* Informacion */
+
+.about__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about__info-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--secundaria);
+    font-size: 4rem;
+    color:var(--amarillofuerte)
+}
+
+.emoji__rocket{
+    font-size: 3.5rem;
+}
+
+.about__info-texto{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Boton */
+
+
+.about__info-btn{
+    border: none;
+    background-color: var(--amarillosuave);
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+    border-radius: 6rem;
+}
+
+.about__info-btn:hover{
+    background-color: var(--amarillofuerte);
+    -webkit-box-shadow: var(--sombreado);
+    box-shadow: var(--sombreado);
+    cursor: pointer;
+    transition: .6s;
+    
+}
+
+/* ***************************** SECCION: PERSONAS ***************************** */
+
+.personas{
+    margin-top: 7rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Información */
+
+.personas__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.personas__titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--secundaria);
+    font-size: 4rem;
+    color:var(--amarillofuerte)
+}
+
+.personas__texto{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+.personas__stats{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+.stats{
+    text-align: center;
+}
+
+.stats__titulo{
+    font-family: var(--secundaria);
+    color: var(--amarillofuerte);
+}
+
+.stats__parrafo{
+    color: var(--verde);
+    font-weight: bold;
+}
+/* Boton */
+
+.personas__info-btn{
+    border: none;
+    background-color: var(--amarillosuave);
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+    border-radius: 6rem;
+}
+
+.personas__info-btn:hover{
+    background-color: var(--amarillofuerte);
+    -webkit-box-shadow: var(--sombreado);
+    box-shadow: var(--sombreado);
+    cursor: pointer;
+    transition: .6s;
+    
+}
+
+/* Imagen */
+
+.pesona__imagen{
+    width: 32rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+}
+
+/* ***************************** SECCION: TARJETA ***************************** */
+
+.tarjeta{
+    margin-top: 7rem;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 4rem;
+}
+
+/* Tarjeta */
+
+
+.dogecard{
+    background-color:var(--tarjeta);
+    font-size: 2.5rem;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 2rem;
+}
+
+.dogecard__banco{
+    display: flex;
+    margin: 1.5rem 0 0 1.5rem;
+    gap: .3rem;
+}
+
+.banco{
+    font-family:var(--principal);
+    color: var(--blanco)
+}
+
+.dogecard__imagen{
+    width: 10%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.dogecard__numeros{
+    height: 37%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    gap: 3rem;
+}
+
+.dogecard__numeros p{
+    font-size: 3rem;
+}
+
+.dogecard__fecha{
+    color: var(--gris);
+    font-size: 1.2rem;
+    margin: 1rem 0 0 1rem;
+}
+
+.dogecard__nombre{
+    color: var(--blanco);
+    margin: 1rem 0;
+    margin-left: 1rem;
+    font-size: 2.3rem;
+}
+
+.dogecard__logo{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    height: 10%;
+}
+
+.dogecard__logo-imagen{
+    object-fit: cover;
+    object-position: center;
+    width: 18%;
+    margin-right: 1.5rem;
+    
+}
+
+/* Info */
+
+.tarjeta__info{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 2.5rem;
+}
+
+.tarjeta__info-titulo{
+    display: flex;
+    gap: 1rem;
+    font-family: var(--secundaria);
+    font-size: 4rem;
+    color:var(--amarillofuerte)
+}
+
+.tarjeta__info-párrafo{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Boton */
+
+.tarjeta__info-btn{
+    border: none;
+    background-color: var(--amarillosuave);
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+    border-radius: 6rem;
+}
+
+.tarjeta__info-btn:hover{
+    background-color: var(--amarillofuerte);
+    -webkit-box-shadow: var(--sombreado);
+    box-shadow: var(--sombreado);
+    cursor: pointer;
+    transition: .6s;
+}
+
+/* ***************************** SECCION: BENEFICIOS ***************************** */
+
+.beneficios{
+    margin-top: 6rem;
+}
+
+.beneficios__titulo{
+    width: 100%;
+    text-align: center;
+    font-family: var(--secundaria);
+    font-size: 5rem;
+    color:var(--amarillofuerte);
+    border-bottom: 2px solid var(--amarillofuerte);
+}
+
+.beneficios__catalogo{
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 3rem;
+}
+
+.beneficios__muestra{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono{
+    width: 10rem;
+    object-fit: contain;
+    object-position: center;
+    background-color: var(--amarillofuerte);
+    border-radius: 8rem;
+    padding: 1rem;
+
+}
+
+.beneficios__muestra-titulo{
+    text-align: center;
+    font-family: var(--secundaria);
+    color: var(--amarillofuerte);
+    font-size: 3rem;
+}
+
+.beneficios__muestra-parrafo{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* ***************************** SECCION: APP ***************************** */
+
+.app{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__info{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.app__info-titulo{
+    text-align: center;
+    font-family: var(--secundaria);
+    font-size: 6em;
+    color:var(--amarillofuerte)
+}
+
+.app__info-texto{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.app__info-btn{
+    background-color: var(--negro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 3%;
+    cursor: pointer;
+}
+
+.btn-downland{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn__parrafo{
+    display: flex;
+    flex-direction:column;
+    font-size: 1.5rem;
+}
+
+.btn__span{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.app__info-logo{
+    width: 12%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* ***************************** SECCION: FOOTER ***************************** */
+
+.footer{
+    width: 100%;
+    height: 35rem;
+    background: var(--grisclaro)
+    
+}
+
+.footer__contenido{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Redes */
+
+.footer__contenido-redes{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer__contenido-redes-titulo{
+    font-size: 2rem;
+}
+
+.redes{
+    display: flex;
+    gap: 1rem;
+}
+
+.fa-facebook-square:hover{
+    color: #3b5998;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.fa-twitter-square:hover{
+    color: #1da1f2;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.fa-instagram-square:hover{
+    color: #c13584;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.fa-envelope-square:hover{
+    color: #ff0000;
+    transition: .6s;
+    cursor: pointer;
+}
+
+
+/* Parrafo */
+
+.footer__contenido-texto{
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__contenido-texto-titulo{
+    color: var(--amarillo);
+    font-size: 5rem;
+}
+
+.footer__contenido-texto-parrafo{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+/* Links  */
+
+.footer__contenido-links-titulo{
+    font-size: 2rem;
+}
+
+.footer__contenido-links-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    
+}
+
+.footer__contenido-links-lista a{
+    color: var(--gris);
+}
+
+
+/* ***************************** MEDIAQUERIES ***************************** */
+
+
+@media (min-width: 768px) and (max-width:1024px) {
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 10rem;
+        gap: .3rem;
+    }
+
+    .navbar__titulo{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .navbar__titulo a{
+        font-size: 2.8rem;
+    }
+
+    .navbar__links-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: .2rem;
+  
+    }
+
+    .navbar__links-list a{
+        font-size: 1.7rem;
+        padding: .4rem;
+    }
+
+    .navbar__button-login{
+        font-size: 1.5rem;
+    }
+}
+
