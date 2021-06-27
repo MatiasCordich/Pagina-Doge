@@ -1,0 +1,64 @@
+/* GLOBALES */
+
+:root{
+    --principal: 'Roboto', sans-serif;
+    --amarillo: #ffbf00;
+    --blanco: #ffffff;
+    --negro: #000;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Utilidades */
+
+.contenedor{
+    text-align: center;
+    font-family:var(--principal);
+    max-width: 90rem;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* **************************** CSS **************************** */
+
+.titulo{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.parrafo{
+    font-size: 2rem;
+}
+
+.input__email{
+    font-size: 2rem;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    background-color: var(--blanco);
+    padding: 1rem ;
+    margin: 2.5rem 0;
+}
+
+.input__btn{
+    background-color: var(--amarillo);
+    border: none;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+

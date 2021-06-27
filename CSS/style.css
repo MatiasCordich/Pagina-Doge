@@ -128,7 +128,7 @@ h1{
 
 /* Navbar Button */
 
-.navbar__button-login{
+.navbar__button-lost{
     background-color: var(--amarillo);
     font-size: 2rem;
     border: none;
@@ -137,7 +137,13 @@ h1{
     
 }
 
-.navbar__button-login:hover{
+.navbar__button-lost a:hover{
+    color: var(--negro);
+    transition: .6s;
+}
+
+.navbar__button-lost:hover{
+    
     -webkit-box-shadow: var(--sombreado);
     box-shadow: var(--sombreado);
     transition: .6s;
@@ -321,6 +327,8 @@ h1{
     width: 50rem;
     height: 30rem;
     border-radius: 2rem;
+    -webkit-box-shadow: var(--sombreado);
+    box-shadow:var(--sombreado);
 }
 
 .dogecard__banco{
@@ -401,6 +409,7 @@ h1{
 }
 
 .tarjeta__info-párrafo{
+    
     font-size: 2.5rem;
     text-align: center;
 }

@@ -1,0 +1,151 @@
+/* GLOBALES */
+
+:root{
+    --principal: 'Roboto', sans-serif;
+    --amarillo: #ffbf00;
+    --blanco: #ffffff;
+    --negro: #000;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Utilidades */
+
+.contenedor{
+    text-align: center;
+    font-family:var(--principal);
+    max-width: 90rem;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* **************************** CSS **************************** */
+
+/* TITULO */
+
+.lost__titulo{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+/* SELECTORES */
+
+.selection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.selection__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border: 1px solid grey;
+    border-radius: 6rem;
+    
+}
+
+/* ICONO */
+
+.icono{
+    background-color: var(--amarillo);
+    border-radius: 100%;
+    padding: 1rem;
+    margin-left: 1.2rem;
+    
+}
+
+/* DESCRIPCION */
+
+
+.description h2{
+    font-size: 2rem;
+}
+
+.description p{
+    font-size: 2rem;
+}
+
+.tarjeta{
+    width: 70%;
+}
+
+.telefono{
+    width: 69.8%;
+}
+
+.ambas{
+    width: 60%;
+}
+
+/* INPUT */
+
+
+input[type='radio']:after {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 1.5rem;
+        top: -.2rem;
+        left: -.2rem;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 1.5rem;
+        top: -.2rem;
+        left: -.2rem;
+        position: relative;
+        background-color: var(--amarillo);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+.radio-ambas{
+    margin-left: 2.5rem;
+}
+
+/* BOTON */
+
+.btn-siguiente{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 1rem 0;
+    background-color: var(--amarillo);
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    border-radius: 2rem;
+}
+
+.btn-siguiente a{
+    color: var(--negro) ;
+}
