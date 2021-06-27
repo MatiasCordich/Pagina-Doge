@@ -144,33 +144,7 @@ h1{
     cursor: pointer;
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-  .navbar{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 26.5rem;
-      gap: 1rem;
-    }
 
-    .navbar__titulo h1{
-        font-size: 3.5rem;
-    }
-
-    .navbar__links-list{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: .8rem;
-        font-size: 2rem;
-    }
-
-    .navbar__button-login{
-        font-size: 1.4rem;
-    }
-}
 
 /* ***************************** SECCION: NOSOTROS ***************************** */
 
@@ -228,6 +202,10 @@ h1{
     font-size: 2.5rem;
     padding: 1rem 3rem;
     border-radius: 6rem;
+}
+
+.about__info-btn a{
+    color: var(--negro);
 }
 
 .about__info-btn:hover{
@@ -574,6 +552,10 @@ h1{
     gap: 1rem;
 }
 
+.redes a{
+    color: var(--negro)
+}
+
 .fa-facebook-square:hover{
     color: #3b5998;
     transition: .6s;
@@ -586,14 +568,14 @@ h1{
     cursor: pointer;
 }
 
-.fa-instagram-square:hover{
-    color: #c13584;
+.fa-reddit-square:hover{
+    color: #ff4500;
     transition: .6s;
     cursor: pointer;
 }
 
-.fa-envelope-square:hover{
-    color: #ff0000;
+.fa-discord:hover{
+    color: #7289da;
     transition: .6s;
     cursor: pointer;
 }
@@ -679,6 +661,34 @@ h1{
 
     .navbar__button-login{
         font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .navbar{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 26.5rem;
+      gap: 1rem;
+    }
+
+    .navbar__titulo h1{
+        font-size: 3.5rem;
+    }
+
+    .navbar__links-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
+        font-size: 2rem;
+    }
+
+    .navbar__button-login{
+        font-size: 1.4rem;
     }
 }
 
