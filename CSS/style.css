@@ -156,6 +156,7 @@ h1{
 
 .about{
     margin-top: 7rem;
+    margin-bottom: 7rem;
     display: flex;
     justify-content: center;
 
@@ -310,7 +311,8 @@ h1{
 /* ***************************** SECCION: TARJETA ***************************** */
 
 .tarjeta{
-    margin-top: 7rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
     height: 100%;
     display: flex;
     align-items: flex-start;
@@ -435,7 +437,8 @@ h1{
 /* ***************************** SECCION: BENEFICIOS ***************************** */
 
 .beneficios{
-    margin-top: 6rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
 }
 
 .beneficios__titulo{
@@ -550,6 +553,7 @@ h1{
 .footer__contenido-redes{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
 }
 .footer__contenido-redes-titulo{
@@ -558,7 +562,12 @@ h1{
 
 .redes{
     display: flex;
+    align-items: center;
     gap: 1rem;
+}
+
+.redes a .fa-discord{
+    margin-top: .7rem;
 }
 
 .redes a{
