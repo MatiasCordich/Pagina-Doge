@@ -28,6 +28,7 @@
 }
 
 body{
+    color: var(--negro);
     font-family: var(--principal)
 }
 
@@ -59,74 +60,83 @@ h1{
 
 /* CSS */
 
-/* ***************************** HEADER/NAVBAR ***************************** */
+/* ***************************** HEADER ***************************** */
+
 .header{
-    height: 10rem;
+    width: 100%;
+    height: 9rem;
+    position: fixed;
+    top: 0;
+    background-color: var(--blanco);
 }
+
+/* ***************************** NAVBAR ***************************** */
+
 .navbar{
     width: 100%;
-    height: 8rem;
-    background-color: var(--blanco);
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    justify-content: space-between;
+    align-items: var(--sombreado);
+    box-shadow: var(--sombreado);
 }
 
-/* Navbar titulo */
+/* ***************************** NAVBAR - titulo ***************************** */
 
 .navbar__titulo{
+    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
 .navbar__titulo a{
-    color: var(--amarillo)
-}
-
-.navbar__titulo span{
+    font-size: 4rem;
     color: var(--amarillofuerte);
 }
 
-.navbar__logo{
-    width: 4.4rem;
+.navbar__titulo span{
+    color: var(--amarillosuave);
 }
 
-/* Navbar links */
+.navbar__logo{
+    width: 15%;
+}
+
+/* ***************************** NAVBAR - links ***************************** */
+
+.navbar__links{
+    height: 100%;
+}
 
 .navbar__links-list{
+    height: 100%;
     display: flex;
+    align-items: center;
     gap: 3rem;
 }
 
+
 .navbar__links-list a{
-    position: relative;
-    color: var(--negro);
-    padding: 0 1rem;
     font-size: 1.8rem;
+    color: var(--negro);
 }
 
-.navbar__links-list a:after{
-    content: "";
-    position: absolute;
-    background-color: var(--amarillo);
-    height: .2rem;
-    width: 0;
-    left: 0;
-    bottom: -1rem;
-    
+
+.navbar__links-list a:hover{
+    color: var(--amarillofuerte);
+    transition: .6s;
 }
 
-.navbar__links-list a:hover::after{
-    width: 100%;
-    transition: .3s;
-}
+/* ***************************** NAVBAR - botón ***************************** */
 
-/* Navbar Button */
+.navbar__button{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .navbar__button-lost{
     background-color: var(--amarillo);
@@ -134,7 +144,7 @@ h1{
     border: none;
     padding: 1rem 2.5rem;
     border-radius: 1rem;
-    
+    margin-right: 2rem;
 }
 
 .navbar__button-lost a:hover{
@@ -143,26 +153,37 @@ h1{
 }
 
 .navbar__button-lost:hover{
-    
     -webkit-box-shadow: var(--sombreado);
     box-shadow: var(--sombreado);
     transition: .6s;
     cursor: pointer;
 }
 
+/* ***************************** SECCIONES - títulos ***************************** */
+
+.about__info-titulo,
+.personas__titulo,
+.tarjeta__info-titulo,
+.beneficios__titulo,
+.app__info-titulo{
+    font-family: var(--secundaria);
+    font-size: 4.3rem;
+    color: var(--amarillofuerte);
+}
 
 
 /* ***************************** SECCION: NOSOTROS ***************************** */
 
 .about{
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    margin-top: 16rem;
+    margin-bottom: 8rem;
     display: flex;
     justify-content: center;
+    align-items: center;
 
 }
 
-/* Imagen */
+/* ***************************** NOSOTROS - imagen ***************************** */
 
 .about__imagen{
     object-fit: cover;
@@ -171,7 +192,7 @@ h1{
     border-radius: 100%;
 }
 
-/* Informacion */
+/* ***************************** NOSOTROS - información ***************************** */
 
 .about__info{
     display: flex;
@@ -186,9 +207,6 @@ h1{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-family: var(--secundaria);
-    font-size: 4rem;
-    color:var(--amarillofuerte)
 }
 
 .emoji__rocket{
@@ -200,8 +218,7 @@ h1{
     text-align: center;
 }
 
-/* Boton */
-
+/* ***************************** NOSOTROS - Botón ***************************** */
 
 .about__info-btn{
     border: none;
@@ -220,20 +237,39 @@ h1{
     -webkit-box-shadow: var(--sombreado);
     box-shadow: var(--sombreado);
     cursor: pointer;
-    transition: .6s;
-    
+    transition: .6s;    
 }
 
-/* ***************************** SECCION: PERSONAS ***************************** */
+/* ***************************** SECCIÓN - PERSONAS ***************************** */
 
 .personas{
-    margin-top: 7rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
-/* Información */
+/* ***************************** PERSONAS - imagen ***************************** */
+
+.pesona__imagen{
+    width: 32rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+}
+
+/* ***************************** PERSONAS - titulo ***************************** */
+
+.personas__titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;  
+}
+
+/* ***************************** PERSONAS - información ***************************** */
 
 .personas__info{
     display: flex;
@@ -241,17 +277,6 @@ h1{
     justify-content: center;
     align-items: center;
     gap: 3rem;
-}
-
-.personas__titulo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    font-family: var(--secundaria);
-    font-size: 4rem;
-    color:var(--amarillofuerte)
 }
 
 .personas__texto{
@@ -280,7 +305,8 @@ h1{
     color: var(--verde);
     font-weight: bold;
 }
-/* Boton */
+
+/* ***************************** PERSONAS - botón ***************************** */
 
 .personas__info-btn{
     border: none;
@@ -295,24 +321,15 @@ h1{
     -webkit-box-shadow: var(--sombreado);
     box-shadow: var(--sombreado);
     cursor: pointer;
-    transition: .6s;
-    
+    transition: .6s;   
 }
 
-/* Imagen */
-
-.pesona__imagen{
-    width: 32rem;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 100%;
-}
-
-/* ***************************** SECCION: TARJETA ***************************** */
+/* ***************************** SECCIÓN - TARJETA ***************************** */
 
 .tarjeta{
-    margin-top: 12rem;
-    margin-bottom: 12rem;
+
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     height: 100%;
     display: flex;
     align-items: flex-start;
@@ -320,80 +337,8 @@ h1{
     gap: 4rem;
 }
 
-/* Tarjeta */
 
-
-.dogecard{
-    background-color:var(--tarjeta);
-    font-size: 2.5rem;
-    width: 50rem;
-    height: 30rem;
-    border-radius: 2rem;
-    -webkit-box-shadow: var(--sombreado);
-    box-shadow:var(--sombreado);
-}
-
-.dogecard__banco{
-    display: flex;
-    margin: 1.5rem 0 0 1.5rem;
-    gap: .3rem;
-}
-
-.banco{
-    font-family:var(--principal);
-    color: var(--blanco)
-}
-
-.dogecard__imagen{
-    width: 10%;
-    object-fit: contain;
-    object-position: center;
-}
-
-.dogecard__numeros{
-    height: 37%;
-    display: flex;
-    justify-content: center;
-    align-items:flex-end;
-    gap: 3rem;
-}
-
-.dogecard__numeros p{
-    font-size: 3rem;
-}
-
-.dogecard__fecha{
-    color: var(--gris);
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 1.3rem 0 0 1.5rem;
-}
-
-.dogecard__nombre{
-    color: var(--blanco);
-    margin: 1rem 0;
-    margin-left: 1.5rem;
-    font-size: 2.3rem;
-}
-
-.dogecard__logo{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 2rem;
-    margin-bottom: 3rem;
-    width: 100%;
-    height: 10%;
-}
-
-.dogecard__logo-imagen{
-    object-fit: cover;
-    object-position: center;
-    width: 18%;
-    margin-right: 1.5rem;
-    
-}
-
-/* Info */
+/* ***************************** TARJETA - informacion ***************************** */
 
 .tarjeta__info{
     display: flex;
@@ -404,19 +349,15 @@ h1{
 
 .tarjeta__info-titulo{
     display: flex;
-    gap: 1rem;
-    font-family: var(--secundaria);
-    font-size: 4rem;
-    color:var(--amarillofuerte)
+    gap: 1rem; 
 }
 
 .tarjeta__info-párrafo{
-    
     font-size: 2.5rem;
     text-align: center;
 }
 
-/* Boton */
+/* ***************************** TARJETA - botón ***************************** */
 
 .tarjeta__info-btn{
     border: none;
@@ -434,21 +375,23 @@ h1{
     transition: .6s;
 }
 
-/* ***************************** SECCION: BENEFICIOS ***************************** */
+/* ***************************** SECCIÓN: BENEFICIOS ***************************** */
 
 .beneficios{
-    margin-top: 12rem;
-    margin-bottom: 12rem;
+
+    margin-top: 8rem;
+    margin-bottom: 8rem;
 }
+
+/* ***************************** BENEFICIOS - información ***************************** */
 
 .beneficios__titulo{
     width: 100%;
     text-align: center;
-    font-family: var(--secundaria);
-    font-size: 5rem;
-    color:var(--amarillofuerte);
     border-bottom: 2px solid var(--amarillofuerte);
 }
+
+/* ***************************** BENEFICIOS - catálogo ***************************** */
 
 .beneficios__catalogo{
     margin-top: 4rem;
@@ -460,6 +403,8 @@ h1{
     gap: 3rem;
 }
 
+/* ***************************** BENEFICIOS - muestra ***************************** */
+
 .beneficios__muestra{
     height: 100%;
     width: 30%;
@@ -467,16 +412,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.icono{
-    width: 10rem;
-    object-fit: contain;
-    object-position: center;
-    background-color: var(--amarillofuerte);
-    border-radius: 8rem;
-    padding: 1rem;
-
+    gap: 1rem;
 }
 
 .beneficios__muestra-titulo{
@@ -491,14 +427,29 @@ h1{
     text-align: center;
 }
 
+/* ***************************** BENEFICIOS - iconos ***************************** */
+
+.icono{
+    width: 10rem;
+    object-fit: contain;
+    object-position: center;
+    background-color: var(--amarillofuerte);
+    border-radius: 8rem;
+    padding: 1rem;
+}
+
 /* ***************************** SECCION: APP ***************************** */
 
 .app{
-    margin-top: 6rem;
+
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* ***************************** APP - información ***************************** */
 
 .app__info{
     display: flex;
@@ -508,15 +459,14 @@ h1{
 
 .app__info-titulo{
     text-align: center;
-    font-family: var(--secundaria);
-    font-size: 6em;
-    color:var(--amarillofuerte)
 }
 
 .app__info-texto{
     font-size: 2.5rem;
     text-align: center;
 }
+
+/* ***************************** APP - botón ***************************** */
 
 .btn-downland{
     display: flex;
@@ -539,8 +489,9 @@ h1{
     width: 100%;
     height: 35rem;
     background: var(--grisclaro)
-    
 }
+
+/* ***************************** FOOTER: contenido ***************************** */
 
 .footer__contenido{
     display: flex;
@@ -548,7 +499,7 @@ h1{
     align-items: center;
 }
 
-/* Redes */
+/* ***************************** FOOTER: contenido - redes ***************************** */
 
 .footer__contenido-redes{
     display: flex;
@@ -560,15 +511,15 @@ h1{
     font-size: 2rem;
 }
 
+/* ***************************** FOOTER: redes ***************************** */
+
 .redes{
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.redes a .fa-discord{
-    margin-top: .7rem;
-}
+/* ***************************** FOOTER: link-redes ***************************** */
 
 .redes a{
     color: var(--negro)
@@ -598,8 +549,11 @@ h1{
     cursor: pointer;
 }
 
+.redes a .fa-discord{
+    margin-top: .7rem;
+}
 
-/* Parrafo */
+/* ***************************** FOOTER: párrafo ***************************** */
 
 .footer__contenido-texto{
     width: 27%;
@@ -614,13 +568,17 @@ h1{
     font-size: 5rem;
 }
 
+.footer__contenido-texto-titulo span{
+    color: var(--amarillosuave);
+}
+
 .footer__contenido-texto-parrafo{
     text-align: center;
     font-size: 1.5rem;
 }
 
 
-/* Links  */
+/* ***************************** FOOTER: links-extras ***************************** */
 
 .footer__contenido-links-titulo{
     font-size: 2rem;
@@ -632,7 +590,6 @@ h1{
     gap: 1.5rem;
     font-size: 1.5rem;
     margin-top: 1rem;
-    
 }
 
 .footer__contenido-links-lista a{
@@ -640,73 +597,276 @@ h1{
 }
 
 
-/* ***************************** MEDIAQUERIES ***************************** */
+/* *************************************** MEDIAQUERIES *************************************** */
 
+@media (max-width:767px) {
 
-@media (min-width: 768px) and (max-width:1024px) {
+    /* *************HEADER*************** */
+
+    .header{
+        height: 36rem;
+        position: relative;
+    }
+
+    /* *************NAVBAR*************** */
+
     .navbar{
+        height: 36rem;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        height: 10rem;
-        gap: .3rem;
-    }
-
-    .navbar__titulo{
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-    }
-
-    .navbar__titulo a{
-        font-size: 2.8rem;
-    }
-
-    .navbar__links-list{
-        display: flex;
-        flex-direction: row;
+        flex-direction:column;
         justify-content: center;
         align-items: center;
-        gap: .2rem;
-  
-    }
-
-    .navbar__links-list a{
-        font-size: 1.7rem;
-        padding: .4rem;
-    }
-
-    .navbar__button-login{
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 767px){
-  .navbar{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 26.5rem;
-      gap: 1rem;
-    }
-
-    .navbar__titulo h1{
-        font-size: 3.5rem;
+        
     }
 
     .navbar__links-list{
         display: flex;
         flex-direction: column;
+    }
+
+    .navbar__links-list a{
+        font-size: 1.5rem;
+    }
+
+    .navbar__button-lost{
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+
+    /* *************NOSOTROS*************** */
+
+    .about{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: .8rem;
+        gap: 2rem;
+    }
+
+    .about__imagen{
+        width: 25rem;
+    }
+
+    .about__info-titulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2.7rem;
+        margin-top: 2rem;
+    }
+
+    .emoji__rocket{
+        font-size: 2.5rem;
+    }
+
+    .about__info-texto{
+        font-size: 1.7rem;
+    }
+
+    .about__info-btn{
+        font-size: 1.5rem;
+    }
+
+    /* *************PERSONAS*************** */
+
+    .personas{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .persona__imagen{
+        width: 27rem;
+    }
+
+    .personas__titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2.7rem;
+    }
+
+    .personas__texto{
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    .personas__info-btn{
+        font-size: 1.5rem;
+    }
+
+    .personas__stats{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        gap: 2rem;
+        
+    }
+
+    /* *************TARJETA*************** */
+
+    .tarjeta{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tarjeta__info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tarjeta__info-titulo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.7rem;
+    }
+
+    .tarjeta__info-párrafo{
+        font-size: 1.7rem;
+    }
+
+    .tarjeta__info-btn{
+        font-size: 1.5rem
+    }
+
+    .dogecard{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dogecard__imagen{
+        width: 90%;
+    }
+
+    /* *************BENEFICIOS*************** */
+
+    .beneficios__titulo{
+        font-size: 3rem;
+    }
+    .beneficios__catalogo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .beneficios__muestra{
+        width: 100%;
+    }
+
+    .beneficios__muestra-titulo{
         font-size: 2rem;
     }
 
-    .navbar__button-login{
-        font-size: 1.4rem;
+    .beneficios__muestra-parrafo{
+        font-size: 1.5rem;
+    }
+
+    /* *************APP*************** */
+
+    .app{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .app__imagen{
+        width: 30rem;
+    }
+
+    .app__info-titulo{
+        font-size: 2.7rem;
+    }
+
+    .app__info-texto{
+        font-size: 1.5rem;
+    }
+
+    .btn-downland{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .apple__logo,
+    .play__logo{
+        width: 15rem;
+    }
+
+    /* *************FOOTER*************** */
+    .footer{
+        height: 100%;
+    }
+    .footer__contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer__contenido-redes-titulo{
+        font-size: 1.8rem;
+    }
+
+    .footer__contenido-texto{
+        width: 100%;
+    }
+
+    .footer__contenido-texto-titulo{
+        font-size: 2.5rem;
+    }
+
+    .footer__contenido-texto-parrafo{
+        font-size: 1.5rem;
+    }
+
+    .footer__contenido-links-titulo{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .footer__contenido-links-lista{
+        justify-content: center;
+        align-items: center;
+    }
+
+     
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    
+    .navbar__titulo a{
+        font-size: 2.3rem;
+    }
+
+    .navbar__links-list a{
+        font-size: 1.5rem;
+    }
+
+    .navbar__button-lost{
+        font-size: 1.5rem;
+        padding: 1rem 2.5rem;
+        margin-left: 2rem;
     }
 }
+
 
