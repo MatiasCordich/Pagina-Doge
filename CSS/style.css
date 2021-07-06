@@ -159,6 +159,26 @@ h1{
     cursor: pointer;
 }
 
+/* ***************************** NAVBAR - botón-hamburguesa ***************************** */
+
+.hamburger-btn{
+    display: none;
+    width: 5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 1.3rem;
+}
+
+.hamburger-btn span{
+    display: block;
+    background-color: var(--amarillofuerte);
+    height: .2rem;
+    width: 2.5rem;
+    margin: 1rem auto;
+    border-radius: .2rem;
+}
+
 /* ***************************** SECCIONES - títulos ***************************** */
 
 .about__info-titulo,
@@ -604,14 +624,14 @@ h1{
     /* *************HEADER*************** */
 
     .header{
-        height: 36rem;
+        height: 100%;
         position: relative;
     }
 
     /* *************NAVBAR*************** */
 
     .navbar{
-        height: 36rem;
+        height: 100%;
         display: flex;
         flex-direction:column;
         justify-content: center;
@@ -619,9 +639,33 @@ h1{
         
     }
 
+    .navbar__titulo{
+        margin-right: 4rem;
+    }
+
+    .navbar__titulo h1 a{
+        font-size: 4rem;
+    }
+    
+    .navbar__logo{
+        width: 3rem;
+    }
+
+    .navbar__button{
+        margin-bottom: 2rem;
+    }
+
+    .navbar__links,
+    .navbar__button{
+        margin-top: 2rem;
+        display: none;
+    }
+
     .navbar__links-list{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .navbar__links-list a{
@@ -633,6 +677,20 @@ h1{
         margin-right: 0;
     }
 
+    /* *************BOTON HAMBURGUESA*************** */
+
+    .hamburger-btn{
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 11px;
+    }
+
+    .navbar__links.activado,
+    .navbar__button.activado{
+        display: flex;
+    }
+
     /* *************NOSOTROS*************** */
 
     .about{
@@ -641,6 +699,7 @@ h1{
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        margin-top: 4rem;
     }
 
     .about__imagen{
@@ -676,6 +735,7 @@ h1{
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        margin-top: 4rem;
     }
 
     .persona__imagen{
