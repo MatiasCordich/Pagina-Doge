@@ -906,27 +906,185 @@ h1{
         align-items: center;
     }
 
-     
-    
 }
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+    .header{
+        height: 100%;
+        position: relative;
+    }
+
+    /* ********** NAVBAR ********** */
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        height: 100%;
+    }
+
+    .navbar__titulo{
+        width: 100%;
+        height: 6rem;
+    }
+
+    .navbar__logo{
+        width: 5rem;
+    }
+
+    .navbar__links,
+    .navbar__button{
+        display: none;
+    }
+
+    .navbar__button{
+        margin-bottom: 2rem;
+    }
     
-    .navbar__titulo a{
-        font-size: 2.3rem;
+    /* ********** NAVBAR-BUTTON HAMBURGER ********** */
+
+    .hamburger-btn{
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 11px;
     }
 
-    .navbar__links-list a{
+    .navbar__links.activado,
+    .navbar__button.activado{
+        display: flex;
+    }
+
+    /* ********** ABOUT ********** */
+
+    .about{
+        margin-top: 4rem;
+    }
+
+    .about__info-titulo{
+        font-size: 3.5rem;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .about__info-texto{
+        font-size: 2rem;
+    }
+
+    .emoji__rocket{
+        font-size: 2.5rem;
+    }
+
+    .about__info-btn{
+        font-size: 1.6rem;
+    }
+
+    /* ********** PERSONAS ********** */
+
+    .persona__imagen{
+        object-fit: contain;
+        width: 36rem;
+    }
+
+    .personas__titulo{
+        text-align: center;
+        font-size: 3.5rem;
+    }
+
+    .personas__texto{
+        font-size: 2rem;
+    }
+
+    .personas__info-btn{
+        font-size: 1.6rem;
+    }
+
+    .personas__stats{
+        font-size: 2rem;
+    }
+
+    /* ********** TARJETA ********** */
+
+    .dogecard__imagen{
+        width: 36rem;
+    }
+
+    .tarjeta__info-titulo{
+        flex-direction: column;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .emoji__card{
+        font-size: 2rem;
+    }
+
+    .tarjeta__info-párrafo{
+        font-size: 2rem;
+    }
+
+    .tarjeta__info-btn{
+        font-size: 1.6rem;
+    }
+
+    /* ********** BENEFICIOS ********** */
+
+    .beneficios__titulo{
+        font-size: 3.5rem;
+    }
+
+    .beneficios__muestra-titulo{
+        font-size: 2rem;
+    }
+
+    .beneficios__muestra-parrafo{
+        font-size: 1.6rem;
+    }
+
+    /* ********** APP ********** */
+
+    .app__imagen{
+        width: 36rem;
+    }
+
+    .app__info-titulo{
+        font-size: 3.5rem;
+    }
+
+    .app__info-texto{
+        font-size: 2rem;
+    }
+
+    .btn-downland{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .apple__logo,
+    .play__logo{
+        object-fit: cover;
+        object-position: center;
+        height: 8rem;
+        width: 14rem;
+    }
+
+    /* ********** FOOTER ********** */
+
+    .footer__contenido-redes-titulo,
+    .footer__contenido-texto-parrafo,
+    .footer__contenido-links-titulo,
+    .footer__contenido-links-lista a{
         font-size: 1.5rem;
     }
 
-    .navbar__button-lost{
-        font-size: 1.5rem;
-        padding: 1rem 2.5rem;
-        margin-left: 2rem;
+    .footer__contenido-texto-titulo{
+        font-size: 4rem;
     }
+
 }
-
-
